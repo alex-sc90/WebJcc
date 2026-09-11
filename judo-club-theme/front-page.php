@@ -45,7 +45,7 @@ get_header();
     <!-- HERO -->
     <section class="hero" id="inicio">
         <div class="hero-bg">
-            <img src="<?php echo esc_url(JCC_URI . '/assets/images/hero-bg.svg'); ?>" alt="<?php bloginfo('name'); ?>">
+            <img src="<?php echo esc_url(JCC_URI . '/assets/images/portada.png'); ?>" alt="<?php bloginfo('name'); ?>">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -162,7 +162,7 @@ get_header();
                         <p class="actividad-desc">Mejora la respiración, la postura y la flexibilidad. Tonifica el cuerpo y reduce el estrés, adaptándose a cualquier condición física.</p>
                         <div class="actividad-horario">
                             <i class="far fa-clock"></i>
-                            <span>Lun, Mié, Vie: 18:00 - 21:30</span>
+                            <span>Lun, Mar, Vie: 9:00 - 10:00</span>
                         </div>
                     </div>
                 </div>
@@ -247,12 +247,12 @@ get_header();
                             <td>-</td>
                         </tr>
                         <tr>
-                            <td class="disciplina pilates"><i class="fas fa-heartbeat"></i> Pilates</td>
-                            <td>18:00 - 19:00<br>19:00 - 20:00<br>20:30 - 21:30</td>
+                            <td class="disciplina pilates"><i class="fas fa-dumbbell"></i> Pilates</td>
+                            <td>9:00 - 10:00<br>18:00 - 19:00</td>
+                            <td>9:00 - 10:00</td>
                             <td>-</td>
-                            <td>18:00 - 19:00<br>19:00 - 20:00<br>20:30 - 21:30</td>
-                            <td>-</td>
-                            <td>18:00 - 19:00<br>19:00 - 20:00<br>20:30 - 21:30</td>
+                            <td>17:00 - 18:00</td>
+                            <td>9:00 - 10:00</td>
                             <td>-</td>
                         </tr>
                     </tbody>

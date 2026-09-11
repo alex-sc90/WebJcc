@@ -52,6 +52,7 @@ function jcc_sanitize_options($input) {
     $sanitized['horario_general'] = sanitize_textarea_field($input['horario_general'] ?? '');
     $sanitized['instagram'] = esc_url_raw($input['instagram'] ?? '');
     $sanitized['facebook'] = esc_url_raw($input['facebook'] ?? '');
+    $sanitized['twitter'] = esc_url_raw($input['twitter'] ?? '');
     $sanitized['google_maps'] = esc_url_raw($input['google_maps'] ?? '');
     return $sanitized;
 }
@@ -88,6 +89,8 @@ function jcc_render_social_fields() {
     <p class="description">URL de Instagram</p>
     <input type="url" name="jcc_theme_options[facebook]" value="<?php echo esc_attr($options['facebook'] ?? ''); ?>" class="regular-text" placeholder="https://www.facebook.com/tu-pagina/">
     <p class="description">URL de Facebook</p>
+    <input type="url" name="jcc_theme_options[twitter]" value="<?php echo esc_attr($options['twitter'] ?? ''); ?>" class="regular-text" placeholder="https://twitter.com/tu-usuario/">
+    <p class="description">URL de Twitter / X</p>
     <?php
 }
 

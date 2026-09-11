@@ -55,5 +55,5 @@ add_action('wp_enqueue_scripts', 'jcc_scripts');
  */
 function jcc_get_option($key, $default = '') {
     $options = get_option('jcc_theme_options', array());
-    return isset($options[$key]) ? $options[$key] : $default;
+    return !empty($options[$key]) ? $options[$key] : $default;
 }

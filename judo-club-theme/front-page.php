@@ -410,6 +410,12 @@ get_header();
                                 <i class="fab fa-facebook-f"></i>
                             </a>
                         <?php endif; ?>
+                        <?php $twitter = jcc_get_option('twitter'); ?>
+                        <?php if ($twitter) : ?>
+                            <a href="<?php echo esc_url($twitter); ?>" target="_blank" class="social-link" aria-label="Twitter / X">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="contacto-map">

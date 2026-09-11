@@ -393,8 +393,8 @@ get_header();
                             <i class="far fa-clock"></i>
                         </div>
                         <div class="contacto-text">
-                            <h3>Horario General</h3>
-                            <p><?php echo nl2br(esc_html(jcc_get_option('horario_general', "Lunes a Viernes: 10:30 - 13:30 / 17:00 - 21:30\nSábados: 10:00 - 13:00"))); ?></p>
+                            <h3>Horario</h3>
+                            <p><?php echo nl2br(esc_html(jcc_get_option('horario_general', "Lunes a Viernes: 9:30 - 13:30 / 17:00 - 23:00\nSábados: 9:30 - 13:30"))); ?></p>
                         </div>
                     </div>
                     <div class="contacto-social">
@@ -413,7 +413,7 @@ get_header();
                         <?php $twitter = jcc_get_option('twitter'); ?>
                         <?php if ($twitter) : ?>
                             <a href="<?php echo esc_url($twitter); ?>" target="_blank" class="social-link" aria-label="Twitter / X">
-                                <i class="fab fa-x-twitter"></i>
+                                <i class="fab fa-twitter"></i>
                             </a>
                         <?php endif; ?>
                     </div>

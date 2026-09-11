@@ -30,7 +30,7 @@
                         <?php $twitter = jcc_get_option('twitter'); ?>
                         <?php if ($twitter) : ?>
                             <a href="<?php echo esc_url($twitter); ?>" target="_blank" aria-label="Twitter / X">
-                                <i class="fab fa-x-twitter"></i>
+                                <i class="fab fa-twitter"></i>
                             </a>
                         <?php endif; ?>
                     </div>

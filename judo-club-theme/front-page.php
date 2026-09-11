@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Front Page Template
  */
@@ -45,13 +45,13 @@ get_header();
     <!-- HERO -->
     <section class="hero" id="inicio">
         <div class="hero-bg">
-            <img src="<?php echo esc_url(JCC_URI . '/assets/images/hero-bg.jpg'); ?>" alt="<?php bloginfo('name'); ?>">
+            <img src="<?php echo esc_url(JCC_URI . '/assets/images/hero-bg.svg'); ?>" alt="<?php bloginfo('name'); ?>">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title"><?php bloginfo('name'); ?></h1>
             <p class="hero-subtitle">El Camino de la Suavidad</p>
-            <p class="hero-text">Más de 20 años de experiencia en artes marciales en A Coruña. Únete a nuestra familia de deportistas.</p>
+            <p class="hero-text">Más de 50 años de experiencia en artes marciales en A Coruña. Únete a nuestra familia de deportistas.</p>
             <div class="hero-buttons">
                 <a href="#horarios" class="btn btn-primary">Ver Horarios</a>
                 <a href="#contacto" class="btn btn-secondary">Contacto</a>
@@ -70,7 +70,7 @@ get_header();
             <div class="actividades-grid">
                 <div class="actividad-card">
                     <div class="actividad-img">
-                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/judo.jpg'); ?>" alt="Judo">
+                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/judo.svg'); ?>" alt="Judo">
                         <div class="actividad-badge">Popular</div>
                     </div>
                     <div class="actividad-content">
@@ -85,7 +85,7 @@ get_header();
 
                 <div class="actividad-card">
                     <div class="actividad-img">
-                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/jiu-jitsu.jpg'); ?>" alt="Jiu-Jitsu">
+                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/jiu-jitsu.svg'); ?>" alt="Jiu-Jitsu">
                     </div>
                     <div class="actividad-content">
                         <h3 class="actividad-title">Jiu-Jitsu</h3>
@@ -99,7 +99,21 @@ get_header();
 
                 <div class="actividad-card">
                     <div class="actividad-img">
-                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/aikido.jpg'); ?>" alt="Aikido">
+                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/karate.svg'); ?>" alt="Karate">
+                    </div>
+                    <div class="actividad-content">
+                        <h3 class="actividad-title">Karate</h3>
+                        <p class="actividad-desc">Karate ni sente nashi: en el karate no existe el primer ataque. Un camino de defensa personal, respeto y desarrollo personal.</p>
+                        <div class="actividad-horario">
+                            <i class="far fa-clock"></i>
+                            <span>Mar, Jue: 20:30 - 22:30</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actividad-card">
+                    <div class="actividad-img">
+                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/aikido.svg'); ?>" alt="Aikido">
                     </div>
                     <div class="actividad-content">
                         <h3 class="actividad-title">Aikido</h3>
@@ -113,7 +127,7 @@ get_header();
 
                 <div class="actividad-card">
                     <div class="actividad-img">
-                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/iaido.jpg'); ?>" alt="Iaido">
+                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/iaido.svg'); ?>" alt="Iaido">
                     </div>
                     <div class="actividad-content">
                         <h3 class="actividad-title">Iaido</h3>
@@ -127,7 +141,7 @@ get_header();
 
                 <div class="actividad-card">
                     <div class="actividad-img">
-                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/taichi.jpg'); ?>" alt="Tai Chi">
+                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/taichi.svg'); ?>" alt="Tai Chi">
                     </div>
                     <div class="actividad-content">
                         <h3 class="actividad-title">Tai Chi</h3>
@@ -141,14 +155,14 @@ get_header();
 
                 <div class="actividad-card">
                     <div class="actividad-img">
-                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/fitness.jpg'); ?>" alt="Fitness">
+                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/pilates.svg'); ?>" alt="Pilates">
                     </div>
                     <div class="actividad-content">
-                        <h3 class="actividad-title">Fitness</h3>
-                        <p class="actividad-desc">Sala de musculación y entrenamiento para ponerte en forma.</p>
+                        <h3 class="actividad-title">Pilates</h3>
+                        <p class="actividad-desc">Mejora la respiración, la postura y la flexibilidad. Tonifica el cuerpo y reduce el estrés, adaptándose a cualquier condición física.</p>
                         <div class="actividad-horario">
                             <i class="far fa-clock"></i>
-                            <span>Lun - Vie: 10:30 - 13:30</span>
+                            <span>Lun, Mié, Vie: 18:00 - 21:30</span>
                         </div>
                     </div>
                 </div>
@@ -197,6 +211,15 @@ get_header();
                             <td>-</td>
                         </tr>
                         <tr>
+                            <td class="disciplina karate"><i class="fas fa-fist-raised"></i> Karate</td>
+                            <td>-</td>
+                            <td>20:30 - 21:30<br>21:30 - 22:30</td>
+                            <td>-</td>
+                            <td>20:30 - 21:30<br>21:30 - 22:30</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
                             <td class="disciplina aikido"><i class="fas fa-yin-yang"></i> Aikido</td>
                             <td>21:30</td>
                             <td>21:30</td>
@@ -224,12 +247,12 @@ get_header();
                             <td>-</td>
                         </tr>
                         <tr>
-                            <td class="disciplina pilates"><i class="fas fa-dumbbell"></i> Pilates</td>
-                            <td>9:00 - 10:00<br>18:00 - 19:00</td>
-                            <td>9:00 - 10:00</td>
+                            <td class="disciplina pilates"><i class="fas fa-heartbeat"></i> Pilates</td>
+                            <td>18:00 - 19:00<br>19:00 - 20:00<br>20:30 - 21:30</td>
                             <td>-</td>
-                            <td>17:00 - 18:00</td>
-                            <td>9:00 - 10:00</td>
+                            <td>18:00 - 19:00<br>19:00 - 20:00<br>20:30 - 21:30</td>
+                            <td>-</td>
+                            <td>18:00 - 19:00<br>19:00 - 20:00<br>20:30 - 21:30</td>
                             <td>-</td>
                         </tr>
                     </tbody>
@@ -238,6 +261,7 @@ get_header();
             <div class="horarios-legend">
                 <div class="legend-item"><span class="legend-color judo"></span> Judo</div>
                 <div class="legend-item"><span class="legend-color jiu-jitsu"></span> Jiu-Jitsu</div>
+                <div class="legend-item"><span class="legend-color karate"></span> Karate</div>
                 <div class="legend-item"><span class="legend-color aikido"></span> Aikido</div>
                 <div class="legend-item"><span class="legend-color iaido"></span> Iaido</div>
                 <div class="legend-item"><span class="legend-color taichi"></span> Tai Chi</div>
@@ -251,19 +275,19 @@ get_header();
         <div class="container">
             <div class="sobre-grid">
                 <div class="sobre-img">
-                    <img src="<?php echo esc_url(JCC_URI . '/assets/images/sobre-nosotros.jpg'); ?>" alt="<?php bloginfo('name'); ?> Interior">
+                    <img src="<?php echo esc_url(JCC_URI . '/assets/images/gimnasio.png'); ?>" alt="<?php bloginfo('name'); ?> Interior">
                 </div>
                 <div class="sobre-content">
                     <span class="section-tag">Nuestra Historia</span>
                     <h2 class="section-title">Sobre Nosotros</h2>
                     <p class="sobre-text">
-                        Somos un gimnasio multidisciplinar situado en A Coruña con más de 20 años de experiencia 
+                        Somos un gimnasio multidisciplinar situado en A Coruña con más de 50 años de experiencia
                         en la enseñanza de artes marciales. Contamos con un amplio abanico de servicios y actividades 
                         orientadas a todas las edades y niveles.
                     </p>
                     <p class="sobre-text">
                         Tenemos personal cualificado en las diferentes disciplinas de artes marciales y monitores 
-                        para nuestra área de fitness y musculación. Más de 20 años de experiencia nos avalan.
+                        para nuestra área de fitness y musculación. Más de 50 años de experiencia nos avalan.
                     </p>
                     <div class="sobre-features">
                         <div class="feature">
@@ -271,7 +295,7 @@ get_header();
                                 <i class="fas fa-medal"></i>
                             </div>
                             <div class="feature-text">
-                                <strong>+20 años</strong>
+                                <strong>+50 años</strong>
                                 <span>de experiencia</span>
                             </div>
                         </div>
@@ -370,7 +394,7 @@ get_header();
                         </div>
                         <div class="contacto-text">
                             <h3>Horario General</h3>
-                            <p><?php echo nl2br	esc_html(jcc_get_option('horario_general', 'Lunes a Viernes: 10:30 - 13:30 / 17:00 - 21:30\nSábados: 10:00 - 13:00')); ?></p>
+                            <p><?php echo nl2br(esc_html(jcc_get_option('horario_general', "Lunes a Viernes: 10:30 - 13:30 / 17:00 - 21:30\nSábados: 10:00 - 13:00"))); ?></p>
                         </div>
                     </div>
                     <div class="contacto-social">

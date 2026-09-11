@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Header template
  */
@@ -11,7 +11,7 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+<?php if (function_exists('wp_body_open')) { wp_body_open(); } ?>
 
     <!-- HEADER -->
     <header class="header" id="header">
@@ -24,27 +24,14 @@
                 <?php endif; ?>
             </a>
             <nav class="nav" id="nav">
-                <?php
-                if (has_nav_menu('primary')) {
-                    wp_nav_menu(array(
-                        'theme_location' => 'primary',
-                        'container'      => false,
-                        'menu_class'     => 'nav-menu',
-                        'fallback_cb'    => false,
-                    ));
-                } else {
-                    ?>
-                    <ul class="nav-menu">
-                        <li><a href="#inicio" class="nav-link active">Inicio</a></li>
-                        <li><a href="#actividades" class="nav-link">Actividades</a></li>
-                        <li><a href="#horarios" class="nav-link">Horarios</a></li>
-                        <li><a href="#sobre-nosotros" class="nav-link">Sobre Nosotros</a></li>
-                        <li><a href="#actualidad" class="nav-link">Actualidad</a></li>
-                        <li><a href="#contacto" class="nav-link">Contacto</a></li>
-                    </ul>
-                    <?php
-                }
-                ?>
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#actividades" class="nav-link">Actividades</a></li>
+                    <li><a href="#horarios" class="nav-link">Horarios</a></li>
+                    <li><a href="#sobre-nosotros" class="nav-link">Sobre Nosotros</a></li>
+                    <li><a href="#actualidad" class="nav-link">Actualidad</a></li>
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                </ul>
             </nav>
             <button class="nav-toggle" id="nav-toggle" aria-label="Menú">
                 <i class="fas fa-bars"></i>

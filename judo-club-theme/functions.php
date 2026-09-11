@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Judo Club Coruña Theme Functions
  */
@@ -9,7 +9,6 @@ define('JCC_VERSION', '1.0.0');
 define('JCC_DIR', get_template_directory());
 define('JCC_URI', get_template_directory_uri());
 
-// Include custom post types
 require_once(JCC_DIR . '/inc/custom-post-types.php');
 require_once(JCC_DIR . '/inc/theme-settings.php');
 
@@ -31,10 +30,6 @@ function jcc_theme_setup() {
         'comment-list',
         'gallery',
         'caption',
-    ));
-
-    register_nav_menus(array(
-        'primary' => __('Menú Principal', 'judo-club-coruna'),
     ));
 }
 add_action('after_setup_theme', 'jcc_theme_setup');

@@ -17,6 +17,8 @@
     --color-aikido: #059669;
     --color-iaido: #7c3aed;
     --color-taichi: #d97706;
+    --color-karate: #0e7490;
+    --color-pilates: #4338ca;
     --font-heading: 'Montserrat', sans-serif;
     --font-body: 'Open Sans', sans-serif;
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -115,12 +117,22 @@ ul {
     z-index: 1000;
     background: rgba(15, 15, 26, 0.95);
     backdrop-filter: blur(10px);
-    padding: 15px 0;
+    padding: 8px 0;
     transition: var(--transition);
 }
 
+body.admin-bar .header {
+    top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+    body.admin-bar .header {
+        top: 46px;
+    }
+}
+
 .header.scrolled {
-    padding: 10px 0;
+    padding: 6px 0;
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -131,7 +143,7 @@ ul {
 }
 
 .logo img {
-    height: 50px;
+    height: 36px;
     width: auto;
 }
 
@@ -439,10 +451,11 @@ ul {
 
 .disciplina.judo { color: var(--color-judo); }
 .disciplina.jiu-jitsu { color: var(--color-jiu-jitsu); }
+.disciplina.karate { color: var(--color-karate); }
 .disciplina.aikido { color: var(--color-aikido); }
 .disciplina.iaido { color: var(--color-iaido); }
 .disciplina.taichi { color: var(--color-taichi); }
-.disciplina.pilates { color: var(--color-pilates, #e11d48); }
+.disciplina.pilates { color: var(--color-pilates); }
 
 .horarios-legend {
     display: flex;
@@ -468,9 +481,11 @@ ul {
 
 .legend-color.judo { background: var(--color-judo); }
 .legend-color.jiu-jitsu { background: var(--color-jiu-jitsu); }
+.legend-color.karate { background: var(--color-karate); }
 .legend-color.aikido { background: var(--color-aikido); }
 .legend-color.iaido { background: var(--color-iaido); }
 .legend-color.taichi { background: var(--color-taichi); }
+.legend-color.pilates { background: var(--color-pilates); }
 
 /* === SOBRE NOSOTROS === */
 .sobre-nosotros {
@@ -1087,6 +1102,18 @@ ul {
 }
 
 @media (max-width: 768px) {
+    .header {
+        padding: 15px 0;
+    }
+
+    .header.scrolled {
+        padding: 10px 0;
+    }
+
+    .logo img {
+        height: 50px;
+    }
+
     .nav {
         position: fixed;
         top: 70px;

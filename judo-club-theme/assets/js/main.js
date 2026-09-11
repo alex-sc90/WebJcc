@@ -258,7 +258,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         const dots = dotsContainer.querySelectorAll('.carousel-dot');
-        
+
+        if (slides.length > 0) {
+            slides[0].classList.add('active');
+        }
+
         function goToSlide(index) {
             slides[currentSlide].classList.remove('active');
             dots[currentSlide].classList.remove('active');
@@ -334,163 +338,6 @@ document.addEventListener('DOMContentLoaded', function() {
         startAutoPlay();
     }
     
-    // === PANEL DE ADMINISTRACIÓN ===
-    const btnAdminToggle = document.getElementById('btn-admin-toggle');
-    const adminPanel = document.getElementById('admin-panel');
-    const closeAdmin = document.getElementById('close-admin');
-    const newsForm = document.getElementById('news-form');
-    const actualidadGrid = document.getElementById('actualidad-grid');
-    
-    // Atajo de teclado Ctrl+Shift+A para mostrar panel admin
-    document.addEventListener('keydown', function(e) {
-        if (e.ctrlKey && e.shiftKey && e.key === 'A') {
-            e.preventDefault();
-            if (adminPanel) {
-                adminPanel.style.display = adminPanel.style.display === 'none' ? 'block' : 'none';
-            }
-        }
-    });
-    
-    if (btnAdminToggle && adminPanel) {
-        btnAdminToggle.addEventListener('click', function() {
-            adminPanel.style.display = adminPanel.style.display === 'none' ? 'block' : 'none';
-        });
-    }
-    
-    if (closeAdmin && adminPanel) {
-        closeAdmin.addEventListener('click', function() {
-            adminPanel.style.display = 'none';
-        });
-    }
-    
-    // Formulario para añadir noticias
-    if (newsForm && actualidadGrid) {
-        newsForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const title = document.getElementById('news-title').value;
-            const content = document.getElementById('news-content').value;
-            const imageUrl = document.getElementById('news-image').value;
-            const date = document.getElementById('news-date').value || new Date().toISOString().split('T')[0];
-            const category = document.getElementById('news-category').value;
-            
-            // Formatear fecha
-            const formattedDate = new Date(date).toLocaleDateString('es-ES', {
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric'
-            });
-            
-            // Crear nueva tarjeta de noticia
-            const newArticle = document.createElement('article');
-            newArticle.className = 'noticia-card';
-            newArticle.innerHTML = `
-                <div class="noticia-img">
-                    <img src="${imageUrl}" alt="${title}">
-                    <span class="noticia-badge ${category}">${category.charAt(0).toUpperCase() + category.slice(1)}</span>
-                </div>
-                <div class="noticia-content">
-                    <div class="noticia-meta">
-                        <span><i class="far fa-calendar"></i> ${formattedDate}</span>
-                        <span><i class="far fa-user"></i> Admin</span>
-                    </div>
-                    <h3 class="noticia-title">${title}</h3>
-                    <p class="noticia-excerpt">${content}</p>
-                    <a href="#" class="noticia-link">Leer más <i class="fas fa-arrow-right"></i></a>
-                </div>
-            `;
-            
-            // Añadir al principio del grid
-            actualidadGrid.insertBefore(newArticle, actualidadGrid.firstChild);
-            
-            // Guardar en localStorage
-            saveNewsToStorage({
-                title: title,
-                content: content,
-                imageUrl: imageUrl,
-                date: date,
-                category: category
-            });
-            
-            // Limpiar formulario
-            newsForm.reset();
-            
-            // Mostrar mensaje de éxito
-            showNotification('Noticia publicada correctamente');
-        });
-    }
-    
-    // Guardar noticias en localStorage
-    function saveNewsToStorage(news) {
-        let newsList = JSON.parse(localStorage.getItem('jcc_news') || '[]');
-        newsList.unshift(news);
-        localStorage.setItem('jcc_news', JSON.stringify(newsList));
-    }
-    
-    // Cargar noticias guardadas
-    function loadNewsFromStorage() {
-        const newsList = JSON.parse(localStorage.getItem('jcc_news') || '[]');
-        const actualidadGrid = document.getElementById('actualidad-grid');
-        
-        newsList.forEach(function(news) {
-            const formattedDate = new Date(news.date).toLocaleDateString('es-ES', {
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric'
-            });
-            
-            const newArticle = document.createElement('article');
-            newArticle.className = 'noticia-card';
-            newArticle.innerHTML = `
-                <div class="noticia-img">
-                    <img src="${news.imageUrl}" alt="${news.title}">
-                    <span class="noticia-badge ${news.category}">${news.category.charAt(0).toUpperCase() + news.category.slice(1)}</span>
-                </div>
-                <div class="noticia-content">
-                    <div class="noticia-meta">
-                        <span><i class="far fa-calendar"></i> ${formattedDate}</span>
-                        <span><i class="far fa-user"></i> Admin</span>
-                    </div>
-                    <h3 class="noticia-title">${news.title}</h3>
-                    <p class="noticia-excerpt">${news.content}</p>
-                    <a href="#" class="noticia-link">Leer más <i class="fas fa-arrow-right"></i></a>
-                </div>
-            `;
-            
-            actualidadGrid.insertBefore(newArticle, actualidadGrid.firstChild);
-        });
-    }
-    
-    // Cargar noticias al iniciar
-    loadNewsFromStorage();
-    
-    // Notificación flotante
-    function showNotification(message) {
-        const notification = document.createElement('div');
-        notification.style.cssText = `
-            position: fixed;
-            top: 100px;
-            right: 30px;
-            background: #059669;
-            color: white;
-            padding: 15px 25px;
-            border-radius: 10px;
-            font-weight: 600;
-            z-index: 10000;
-            animation: slideIn 0.3s ease;
-            box-shadow: 0 4px 15px rgba(5, 150, 105, 0.4);
-        `;
-        notification.textContent = message;
-        document.body.appendChild(notification);
-        
-        setTimeout(function() {
-            notification.style.animation = 'slideOut 0.3s ease';
-            setTimeout(function() {
-                notification.remove();
-            }, 300);
-        }, 3000);
-    }
-    
 });
 
 // === CSS para animaciones ===
@@ -522,27 +369,5 @@ style.textContent = `
     .noticia-card:nth-child(1) { transition-delay: 0.1s; }
     .noticia-card:nth-child(2) { transition-delay: 0.2s; }
     .noticia-card:nth-child(3) { transition-delay: 0.3s; }
-    
-    @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translateX(100px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-    
-    @keyframes slideOut {
-        from {
-            opacity: 1;
-            transform: translateX(0);
-        }
-        to {
-            opacity: 0;
-            transform: translateX(100px);
-        }
-    }
 `;
 document.head.appendChild(style);

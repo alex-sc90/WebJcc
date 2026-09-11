@@ -35,7 +35,7 @@ function jcc_register_settings() {
     add_settings_field('jcc_telefono', 'Teléfono', 'jcc_render_field', 'jcc-settings', 'jcc_contact_section', array('id' => 'telefono', 'type' => 'text'));
     add_settings_field('jcc_email', 'Email', 'jcc_render_field', 'jcc-settings', 'jcc_contact_section', array('id' => 'email', 'type' => 'email'));
     add_settings_field('jcc_direccion', 'Dirección', 'jcc_render_field', 'jcc-settings', 'jcc_contact_section', array('id' => 'direccion', 'type' => 'text'));
-    add_settings_field('jcc_horario_general', 'Horario General', 'jcc_render_field', 'jcc-settings', 'jcc_contact_section', array('id' => 'horario_general', 'type' => 'textarea'));
+    add_settings_field('jcc_horario_general', 'Horario General', 'jcc_render_textarea_field', 'jcc-settings', 'jcc_contact_section', array('id' => 'horario_general'));
     add_settings_field('jcc_redes_sociales', 'Redes Sociales (URLs)', 'jcc_render_social_fields', 'jcc-settings', 'jcc_contact_section');
     add_settings_field('jcc_google_maps', 'Google Maps Embed URL', 'jcc_render_field', 'jcc-settings', 'jcc_contact_section', array('id' => 'google_maps', 'type' => 'url'));
 }

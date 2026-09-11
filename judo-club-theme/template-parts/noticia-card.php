@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * Noticia Card Template Part
  */

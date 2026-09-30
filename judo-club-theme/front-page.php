@@ -76,10 +76,6 @@ get_header();
                     <div class="actividad-content">
                         <h3 class="actividad-title">Judo</h3>
                         <p class="actividad-desc">Arte marcial y deporte olímpico. Desarrolla fuerza, equilibrio y disciplina.</p>
-                        <div class="actividad-horario">
-                            <i class="far fa-clock"></i>
-                            <span>Lun, Mié, Vie: 18:00 - 21:30</span>
-                        </div>
                     </div>
                 </div>
 
@@ -90,10 +86,6 @@ get_header();
                     <div class="actividad-content">
                         <h3 class="actividad-title">Jiu-Jitsu</h3>
                         <p class="actividad-desc">La madre de todas las artes marciales. Técnicas de suelo y defensa personal.</p>
-                        <div class="actividad-horario">
-                            <i class="far fa-clock"></i>
-                            <span>Lun, Mié, Vie: 9:30 - 10:30</span>
-                        </div>
                     </div>
                 </div>
 
@@ -104,10 +96,6 @@ get_header();
                     <div class="actividad-content">
                         <h3 class="actividad-title">Karate</h3>
                         <p class="actividad-desc">Karate ni sente nashi: en el karate no existe el primer ataque. Un camino de defensa personal, respeto y desarrollo personal.</p>
-                        <div class="actividad-horario">
-                            <i class="far fa-clock"></i>
-                            <span>Mar, Jue: 20:30 - 22:30</span>
-                        </div>
                     </div>
                 </div>
 
@@ -118,10 +106,6 @@ get_header();
                     <div class="actividad-content">
                         <h3 class="actividad-title">Aikido</h3>
                         <p class="actividad-desc">El arte de la armonía. Aprende a redirigir la energía del oponente.</p>
-                        <div class="actividad-horario">
-                            <i class="far fa-clock"></i>
-                            <span>Todos los días: 21:30</span>
-                        </div>
                     </div>
                 </div>
 
@@ -132,10 +116,6 @@ get_header();
                     <div class="actividad-content">
                         <h3 class="actividad-title">Iaido</h3>
                         <p class="actividad-desc">El arte de desenvainar la espada. Disciplina tradicional japonesa.</p>
-                        <div class="actividad-horario">
-                            <i class="far fa-clock"></i>
-                            <span>Sábados: 10:00 - 12:00</span>
-                        </div>
                     </div>
                 </div>
 
@@ -146,10 +126,6 @@ get_header();
                     <div class="actividad-content">
                         <h3 class="actividad-title">Tai Chi</h3>
                         <p class="actividad-desc">Movimientos fluidos para el equilibrio, la salud y la relajación.</p>
-                        <div class="actividad-horario">
-                            <i class="far fa-clock"></i>
-                            <span>Lun, Mié, Vie: 16:50 - 17:50</span>
-                        </div>
                     </div>
                 </div>
 
@@ -160,10 +136,6 @@ get_header();
                     <div class="actividad-content">
                         <h3 class="actividad-title">Pilates</h3>
                         <p class="actividad-desc">Mejora la respiración, la postura y la flexibilidad. Tonifica el cuerpo y reduce el estrés, adaptándose a cualquier condición física.</p>
-                        <div class="actividad-horario">
-                            <i class="far fa-clock"></i>
-                            <span>Lun, Mar, Vie: 9:00 - 10:00</span>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -226,7 +198,7 @@ get_header();
                             <td>21:30</td>
                             <td>21:30</td>
                             <td>21:30</td>
-                            <td>21:30</td>
+                            <td>-</td>
                         </tr>
                         <tr>
                             <td class="disciplina iaido"><i class="fas fa-ribbon"></i> Iaido</td>

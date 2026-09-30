@@ -45,7 +45,7 @@ get_header();
     <!-- HERO -->
     <section class="hero" id="inicio">
         <div class="hero-bg">
-            <img src="<?php echo esc_url(JCC_URI . '/assets/images/portada.png'); ?>" alt="<?php bloginfo('name'); ?>">
+            <img src="<?php echo esc_url(JCC_URI . '/assets/images/portada.jpg'); ?>" alt="<?php bloginfo('name'); ?>">
         </div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
@@ -70,7 +70,7 @@ get_header();
             <div class="actividades-grid">
                 <div class="actividad-card">
                     <div class="actividad-img">
-                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/judo.svg'); ?>" alt="Judo">
+                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/judo.jpeg'); ?>" alt="Judo">
                         <div class="actividad-badge">Popular</div>
                     </div>
                     <div class="actividad-content">
@@ -113,7 +113,7 @@ get_header();
 
                 <div class="actividad-card">
                     <div class="actividad-img">
-                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/aikido.svg'); ?>" alt="Aikido">
+                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/aikido.jpg'); ?>" alt="Aikido">
                     </div>
                     <div class="actividad-content">
                         <h3 class="actividad-title">Aikido</h3>
@@ -275,7 +275,7 @@ get_header();
         <div class="container">
             <div class="sobre-grid">
                 <div class="sobre-img">
-                    <img src="<?php echo esc_url(JCC_URI . '/assets/images/gimnasio.png'); ?>" alt="<?php bloginfo('name'); ?> Interior">
+                    <img src="<?php echo esc_url(JCC_URI . '/assets/images/gimnasio.jpg'); ?>" alt="<?php bloginfo('name'); ?> Interior">
                 </div>
                 <div class="sobre-content">
                     <span class="section-tag">Nuestra Historia</span>

@@ -85,7 +85,7 @@ get_header();
 
                 <div class="actividad-card">
                     <div class="actividad-img">
-                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/jiu-jitsu.svg'); ?>" alt="Jiu-Jitsu">
+                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/jiu-jitsu.jpg'); ?>" alt="Jiu-Jitsu">
                     </div>
                     <div class="actividad-content">
                         <h3 class="actividad-title">Jiu-Jitsu</h3>
@@ -99,7 +99,7 @@ get_header();
 
                 <div class="actividad-card">
                     <div class="actividad-img">
-                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/karate.svg'); ?>" alt="Karate">
+                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/karate.jpeg'); ?>" alt="Karate">
                     </div>
                     <div class="actividad-content">
                         <h3 class="actividad-title">Karate</h3>
@@ -127,7 +127,7 @@ get_header();
 
                 <div class="actividad-card">
                     <div class="actividad-img">
-                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/iaido.svg'); ?>" alt="Iaido">
+                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/iaido.jpeg'); ?>" alt="Iaido">
                     </div>
                     <div class="actividad-content">
                         <h3 class="actividad-title">Iaido</h3>
@@ -141,7 +141,7 @@ get_header();
 
                 <div class="actividad-card">
                     <div class="actividad-img">
-                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/taichi.svg'); ?>" alt="Tai Chi">
+                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/taichi.jpg'); ?>" alt="Tai Chi">
                     </div>
                     <div class="actividad-content">
                         <h3 class="actividad-title">Tai Chi</h3>
@@ -155,7 +155,7 @@ get_header();
 
                 <div class="actividad-card">
                     <div class="actividad-img">
-                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/pilates.svg'); ?>" alt="Pilates">
+                        <img src="<?php echo esc_url(JCC_URI . '/assets/images/pilates.jpg'); ?>" alt="Pilates">
                     </div>
                     <div class="actividad-content">
                         <h3 class="actividad-title">Pilates</h3>
